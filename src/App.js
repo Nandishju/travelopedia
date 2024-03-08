@@ -1,24 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+// App.tsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import FlightBoard from './components/FlightBoard.tsx';
+import FlightDetail from './components/FlightDetail.tsx';
+import Layout from './components/Layout.tsx';
 
-function App() {
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Layout>
+      <Routes>
+        <Route path="/" exact element={<FlightBoard/>} />
+        <Route path="/flight/:id" element={<FlightDetail/>} />
+      </Routes>
+      </Layout>
+    </Router>
   );
 }
 
