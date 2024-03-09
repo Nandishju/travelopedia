@@ -1,4 +1,3 @@
-// api.ts
 const API_BASE_URL = 'https://flight-status-mock.core.travelopia.cloud';
 
 export interface Flight {

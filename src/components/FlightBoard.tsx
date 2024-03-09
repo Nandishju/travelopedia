@@ -86,14 +86,14 @@ const FlightBoard: React.FC = (): JSX.Element => {
           <tbody>
             {flights.map((flight) => (
               <tr key={flight.flightNumber} className="hover:bg-gray-100">
-                <td className="border-t py-4 px-4">
+                <td className="border-t py-3 px-4">
                   <Link to={`/flight/${flight.id}`} className="text-blue-500 hover:underline">{flight.flightNumber}</Link>
                 </td>
-                <td className="border-t py-4 px-4">{flight.airline}</td>
-                <td className="border-t py-4 px-4">{flight.origin}</td>
-                <td className="border-t py-4 px-4">{flight.destination}</td>
-                <td className="border-t py-4 px-4">{formatDepartureTime(flight.departureTime)}</td>
-                <td className="border-t py-4 px-2">
+                <td className="border-t py-3 px-4">{flight.airline}</td>
+                <td className="border-t py-3 px-4">{flight.origin}</td>
+                <td className="border-t py-3 px-4">{flight.destination}</td>
+                <td className="border-t py-3 px-4">{formatDepartureTime(flight.departureTime)}</td>
+                <td className="border-t py-3 px-2">
                   <span className={`${getStatusBadgeColor(flight.status)} ${getStatusTextColor(flight.status)}  px-3 py-1 rounded-full text-center shadow-md`}>{flight.status}</span>
                 </td>
               </tr>
